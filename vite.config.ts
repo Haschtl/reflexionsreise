@@ -6,7 +6,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:"/",
+  base: "/reflexionsreise/",
   plugins: [react(), svgr({ svgrOptions: { ref: true } })],
   resolve: {
     alias: {
