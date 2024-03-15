@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Carousel, {
   ResponsiveType,
-  CarouselInternalState,
+  // CarouselInternalState,
 } from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./App.css";
@@ -31,20 +31,20 @@ const responsive: ResponsiveType = {
 
 function App() {
   const ref = useRef<Carousel>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
   const [nextSlide, setNextSlide] = useState(0);
   const beforeChange = useCallback(
-    (nextSlide: number, state: CarouselInternalState) => {
+    (nextSlide: number) => {
       setNextSlide(nextSlide);
     },
     []
   );
-  const afterChange = useCallback(
-    (nextSlide: number, state: CarouselInternalState) => {
-      setCurrentSlide(nextSlide);
-    },
-    []
-  );
+  // const afterChange = useCallback(
+  //   (nextSlide: number) => {
+  //     setCurrentSlide(nextSlide);
+  //   },
+  //   []
+  // );
   const setSlide = useCallback(
     (nextSlide: number) => {
       ref.current?.goToSlide(nextSlide);
@@ -60,7 +60,7 @@ function App() {
         ref={ref}
         responsive={responsive}
         beforeChange={beforeChange}
-        afterChange={afterChange}
+        // afterChange={afterChange}
       >
         <CarouselPage
           active={nextSlide === 0}
