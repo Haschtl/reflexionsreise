@@ -3,38 +3,36 @@
   z-index: 100;
   width: 100%;
 
-  .menu-close-button{
-    width:84.4px;
+  .menu-close-button {
+    width: 84.4px;
+  }
+}
+.menu {
+  // position: absolute;
+  overflow: hidden;
+  transition: all 0.3s;
+  // border-radius: 50%;
+  // background-color: rgba(0, 0, 0, 0.51);
+  margin: auto;
+  top: 0;
+  // transform: translateY(-43px);
+  &.open {
+    // border-radius: 0 0 10px 10px;
+    height: 100%;
+    // width: 80%;
   }
 
-  .menu {
-    // position: absolute;
-    overflow: hidden;
-    transition: all 0.3s;
-    border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.51);
-  margin:auto;
-  top:0;
-  transform:translateY(-43px);
-    &.open {
-        border-radius: 0 0 10px 10px;
-        height:100%;
-        width:80%;
-    }
+  &.hidden {
+    height: 0;
+    width: 0;
+  }
 
-    &.hidden {
-      height: 0;
-      width: 0;
-    }
+  .menu-item {
+    cursor: pointer;
+    height: 40px;
 
-    .menu-item{
-        cursor:pointer;
-        height:40px;
-        
-        &.active{
-            
-            background-color: rgba(208, 208, 208, 0.372);
-        }
+    &.active {
+      background-color: rgba(208, 208, 208, 0.372);
     }
   }
 }
