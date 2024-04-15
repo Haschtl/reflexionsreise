@@ -33,10 +33,55 @@ const Menu: React.FC<Props> = ({ active, onChange }) => {
     //   <div className={`menu ${menuOpen ? "open" : "hidden"}`}>
     //     <button className="menu-close-button" onClick={closeMenu}>X</button>
     <div className="menu open">
-      <MenuItem id={0} active={active} onChange={_onChange} />
-      <MenuItem id={1} active={active} onChange={_onChange} />
-      <MenuItem id={2} active={active} onChange={_onChange} />
-      <MenuItem id={3} active={active} onChange={_onChange} />
+      <img
+        className="menu-image"
+        src={import.meta.env.BASE_URL + "assets/images/karte.jpeg"}
+      />
+      <MenuItem id={0} active={active} onChange={_onChange}>
+        Ende
+      </MenuItem>
+      <MenuItem id={1} active={active} onChange={_onChange}>
+        Anfang
+      </MenuItem>
+      <MenuItem id={2} active={active} onChange={_onChange}>
+        Genesis
+      </MenuItem>
+      <MenuItem id={3} active={active} onChange={_onChange}>
+        Inspiration
+      </MenuItem>
+      <MenuItem id={4} active={active} onChange={_onChange}>
+        the origin
+      </MenuItem>
+      <MenuItem id={5} active={active} onChange={_onChange}>
+        Momentum
+      </MenuItem>
+      <MenuItem id={6} active={active} onChange={_onChange}>
+        Entscheidung
+      </MenuItem>
+      <MenuItem id={7} active={active} onChange={_onChange}>
+        Introspection
+      </MenuItem>
+      <MenuItem id={8} active={active} onChange={_onChange}>
+        Kokoro
+      </MenuItem>
+      <MenuItem id={9} active={active} onChange={_onChange}>
+        Mneme
+      </MenuItem>
+      <MenuItem id={10} active={active} onChange={_onChange}>
+        spiegeln
+      </MenuItem>
+      <MenuItem id={11} active={active} onChange={_onChange}>
+        Intention
+      </MenuItem>
+      <MenuItem id={12} active={active} onChange={_onChange}>
+        Wandeltreppen
+      </MenuItem>
+      <MenuItem id={13} active={active} onChange={_onChange}>
+        .Glück
+      </MenuItem>
+      <MenuItem id={14} active={active} onChange={_onChange}>
+        in thoughts
+      </MenuItem>
     </div>
     //   </div>
     // </div>

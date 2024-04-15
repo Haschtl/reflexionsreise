@@ -3,7 +3,7 @@ import "./CarouselPage.scss";
 
 interface Props {
   children?: React.ReactNode;
-  backgroundImage: string;
+  backgroundImage?: string;
   audioFile?: string;
   videoFile?: string;
   active: boolean;
@@ -23,6 +23,12 @@ const CarouselPage: React.FC<Props> = ({
       audioRef.current?.pause();
       videoRef.current?.pause();
       setVideoModalOpen(false);
+    } else if (!backgroundImage) {
+      if (active) {
+        videoRef.current?.play();
+      } else {
+        videoRef.current?.pause();
+      }
     }
   }, [active]);
   const openVideo = useCallback(() => {
@@ -44,8 +50,10 @@ const CarouselPage: React.FC<Props> = ({
             </audio>
           )}
           {/* {audioFile && <button>&#119136;</button>} */}
-          {videoFile && <button onClick={openVideo}>&#128249;</button>}
-          {videoFile && (
+          {backgroundImage && videoFile && (
+            <button onClick={openVideo}>&#128249;</button>
+          )}
+          {backgroundImage && videoFile && (
             <div
               className={`video-modal ${videoModalOpen ? "open" : "hidden"}`}
               onClick={closeVideo}
@@ -59,6 +67,11 @@ const CarouselPage: React.FC<Props> = ({
                 </video>
               </div>
             </div>
+          )}
+          {!backgroundImage && videoFile && (
+            <video className="page-video" ref={videoRef} controls>
+              <source src={videoFile}></source>
+            </video>
           )}
           {children}
         </div>

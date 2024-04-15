@@ -45,11 +45,11 @@ function App() {
   }, []);
   useEffect(() => {
     scrollToBottom();
-    setTimeout(()=>{
+    setTimeout(() => {
       const styleEl = document.createElement("style");
       document.head.appendChild(styleEl);
-      styleEl.innerText="html{scroll-behavior: smooth;}"
-    },100)
+      styleEl.innerText = "html{scroll-behavior: smooth;}";
+    }, 100);
     // styleEl.sheet?.insertRule("html{scroll-behavior: smooth;}");
   }, []);
   // const afterChange = useCallback(
@@ -76,27 +76,109 @@ function App() {
         >
           <CarouselPage
             active={nextSlide === 0}
-            backgroundImage="https://img.freepik.com/premium-vector/happy-valentines-day-svg-typography-quotes-t-shirt-design-bundle-romantic-lettering-love_544307-190.jpg?w=1480"
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/ende.jpeg"
+            }
             audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
-            videoFile="https://upload.wikimedia.org/wikipedia/commons/a/a7/How_to_make_video.webm"
           />
           <CarouselPage
             active={nextSlide === 1}
-            backgroundImage="https://img.freepik.com/premium-vector/happy-valentines-day-svg-typography-quotes-t-shirt-design-bundle-romantic-lettering-love_544307-190.jpg?w=1480"
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/anfang.jpeg"
+            }
             audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
-            videoFile="https://upload.wikimedia.org/wikipedia/commons/a/a7/How_to_make_video.webm"
           />
           <CarouselPage
             active={nextSlide === 2}
-            backgroundImage="https://img.freepik.com/premium-vector/happy-valentines-day-svg-typography-quotes-t-shirt-design-bundle-romantic-lettering-love_544307-190.jpg?w=1480"
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/genesis.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 3}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/inspiration.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 4}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/the-origin.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 5}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/momentum.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 6}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/entscheidung.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 7}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/introspection.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 8}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/kokoro.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 9}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/Mneme.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 10}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/spiegeln.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 11}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/intention.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 12}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/wandeltreppen.jpeg"
+            }
+            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+          />
+          <CarouselPage
+            active={nextSlide === 13}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/glueck.jpeg"
+            }
             audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
             videoFile="https://upload.wikimedia.org/wikipedia/commons/a/a7/How_to_make_video.webm"
           />
           <CarouselPage
-            active={nextSlide === 3}
-            backgroundImage="https://img.freepik.com/premium-vector/happy-valentines-day-svg-typography-quotes-t-shirt-design-bundle-romantic-lettering-love_544307-190.jpg?w=1480"
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
-            videoFile="https://upload.wikimedia.org/wikipedia/commons/a/a7/How_to_make_video.webm"
+            active={nextSlide === 14}
+            videoFile={
+              import.meta.env.BASE_URL +
+              "assets/video/309e52de-e6cb-4f3a-918b-0d0e22931539.mov"
+            }
           />
         </Carousel>
       </div>
