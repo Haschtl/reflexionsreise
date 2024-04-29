@@ -7,10 +7,18 @@
     width: 84.4px;
   }
 }
+.map-wrapper {
+  position: relative;
+  svg {
+    position: absolute;
+    inset: 0;
+    // width:100%;
+    // height:100%;
+  }
+}
 
-.menu-image{
-
-  width:100%;
+.menu-image {
+  width: 100%;
   // margin:10%;
 }
 .menu {
@@ -41,4 +49,8 @@
       background-color: rgba(208, 208, 208, 0.372);
     }
   }
+}
+
+.clickable {
+  cursor: pointer;
 }

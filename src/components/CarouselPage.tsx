@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./CarouselPage.scss";
 
 interface Props {
@@ -15,14 +15,14 @@ const CarouselPage: React.FC<Props> = ({
   backgroundImage,
   active,
 }) => {
-  const [videoModalOpen, setVideoModalOpen] = useState(false);
+  // const [videoModalOpen, setVideoModalOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   useEffect(() => {
     if (!active) {
       audioRef.current?.pause();
       videoRef.current?.pause();
-      setVideoModalOpen(false);
+      // setVideoModalOpen(false);
     } else if (!backgroundImage) {
       if (active) {
         videoRef.current?.play();
@@ -31,14 +31,14 @@ const CarouselPage: React.FC<Props> = ({
       }
     }
   }, [active]);
-  const openVideo = useCallback(() => {
-    setVideoModalOpen(true);
-    videoRef.current?.play();
-  }, []);
-  const closeVideo = useCallback(() => {
-    setVideoModalOpen(false);
-    videoRef.current?.pause();
-  }, []);
+  // const openVideo = useCallback(() => {
+  //   setVideoModalOpen(true);
+  //   videoRef.current?.play();
+  // }, []);
+  // const closeVideo = useCallback(() => {
+  //   setVideoModalOpen(false);
+  //   videoRef.current?.pause();
+  // }, []);
   return (
     <div className="carousel-page">
       <img className="background-image" src={backgroundImage} />
@@ -50,7 +50,7 @@ const CarouselPage: React.FC<Props> = ({
             </audio>
           )}
           {/* {audioFile && <button>&#119136;</button>} */}
-          {backgroundImage && videoFile && (
+          {/* {backgroundImage && videoFile && (
             <button onClick={openVideo}>&#128249;</button>
           )}
           {backgroundImage && videoFile && (
@@ -67,11 +67,12 @@ const CarouselPage: React.FC<Props> = ({
                 </video>
               </div>
             </div>
-          )}
-          {!backgroundImage && videoFile && (
+          )} */}
+          {videoFile && (
+            <div className="page-video-wrapper">
             <video className="page-video" ref={videoRef} controls>
               <source src={videoFile}></source>
-            </video>
+            </video></div>
           )}
           {children}
         </div>
@@ -80,7 +81,7 @@ const CarouselPage: React.FC<Props> = ({
   );
 };
 
-const stopPropagation = (e: React.MouseEvent) => {
-  e.stopPropagation();
-};
+// const stopPropagation = (e: React.MouseEvent) => {
+//   e.stopPropagation();
+// };
 export default CarouselPage;

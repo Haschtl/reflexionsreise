@@ -77,104 +77,120 @@ function App() {
           <CarouselPage
             active={nextSlide === 0}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/ende.jpeg"
+              import.meta.env.BASE_URL + "assets/images/startseite.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
           />
           <CarouselPage
             active={nextSlide === 1}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/anfang.jpeg"
+              import.meta.env.BASE_URL + "assets/images/ende.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={import.meta.env.BASE_URL + "assets/audio/ende.mp3"}
           />
           <CarouselPage
             active={nextSlide === 2}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/genesis.jpeg"
+              import.meta.env.BASE_URL + "assets/images/anfang.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={import.meta.env.BASE_URL + "assets/audio/anfang.mp3"}
           />
           <CarouselPage
             active={nextSlide === 3}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/inspiration.jpeg"
+              import.meta.env.BASE_URL + "assets/images/genesis.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={import.meta.env.BASE_URL + "assets/audio/genesis.mp3"}
           />
           <CarouselPage
             active={nextSlide === 4}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/the-origin.jpeg"
+              import.meta.env.BASE_URL + "assets/images/inspiration.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={
+              import.meta.env.BASE_URL + "assets/audio/inspiration.mp3"
+            }
           />
           <CarouselPage
             active={nextSlide === 5}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/momentum.jpeg"
+              import.meta.env.BASE_URL + "assets/images/the-origin.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={import.meta.env.BASE_URL + "assets/audio/theorigin.mp3"}
           />
           <CarouselPage
             active={nextSlide === 6}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/entscheidung.jpeg"
+              import.meta.env.BASE_URL + "assets/images/momentum.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={import.meta.env.BASE_URL + "assets/audio/momentum.mp3"}
           />
           <CarouselPage
             active={nextSlide === 7}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/introspection.jpeg"
+              import.meta.env.BASE_URL + "assets/images/entscheidung.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={
+              import.meta.env.BASE_URL + "assets/audio/entscheidung.mp3"
+            }
           />
           <CarouselPage
             active={nextSlide === 8}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/kokoro.jpeg"
+              import.meta.env.BASE_URL + "assets/images/introspection.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={
+              import.meta.env.BASE_URL + "assets/audio/introspection.mp3"
+            }
           />
           <CarouselPage
             active={nextSlide === 9}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/Mneme.jpeg"
+              import.meta.env.BASE_URL + "assets/images/kokoro.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={import.meta.env.BASE_URL + "assets/audio/kokoro.mp3"}
           />
           <CarouselPage
             active={nextSlide === 10}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/spiegeln.jpeg"
+              import.meta.env.BASE_URL + "assets/images/Mneme.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={import.meta.env.BASE_URL + "assets/audio/mneme.mp3"}
           />
           <CarouselPage
             active={nextSlide === 11}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/intention.jpeg"
+              import.meta.env.BASE_URL + "assets/images/spiegeln.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={import.meta.env.BASE_URL + "assets/audio/spiegeln.mp3"}
           />
           <CarouselPage
             active={nextSlide === 12}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/wandeltreppen.jpeg"
+              import.meta.env.BASE_URL + "assets/images/intention2.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
+            audioFile={import.meta.env.BASE_URL + "assets/audio/intention.mp3"}
           />
           <CarouselPage
             active={nextSlide === 13}
             backgroundImage={
-              import.meta.env.BASE_URL + "assets/images/glueck.jpeg"
+              import.meta.env.BASE_URL + "assets/images/wandeltreppen.jpeg"
             }
-            audioFile="https://upload.wikimedia.org/wikipedia/commons/b/bb/Test_ogg_mp3_48kbps.wav"
-            videoFile="https://upload.wikimedia.org/wikipedia/commons/a/a7/How_to_make_video.webm"
+            audioFile={
+              import.meta.env.BASE_URL + "assets/audio/wandeltreppen.mp3"
+            }
           />
           <CarouselPage
             active={nextSlide === 14}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/glueck.jpeg"
+            }
+            audioFile={import.meta.env.BASE_URL + "assets/audio/glueck.mp3"}
+          />
+          <CarouselPage
+            active={nextSlide === 15}
+            backgroundImage={
+              import.meta.env.BASE_URL + "assets/images/video.jpeg"
+            }
             videoFile={
               import.meta.env.BASE_URL +
               "assets/video/309e52de-e6cb-4f3a-918b-0d0e22931539.mov"
