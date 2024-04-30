@@ -75,13 +75,6 @@ const Menu: React.FC<Props> = ({ active, onChange }) => {
     //   <div className={`menu ${menuOpen ? "open" : "hidden"}`}>
     //     <button className="menu-close-button" onClick={closeMenu}>X</button>
     <div className="menu open">
-      <div className="map-wrapper">
-        <img
-          className="menu-image"
-          src={import.meta.env.BASE_URL + "assets/images/karte.jpeg"}
-        />
-        <SvgMap ref={svgRef} />
-      </div>
       <MenuItem id={1} active={active} onChange={_onChange}>
         Ende
       </MenuItem>
@@ -127,6 +120,13 @@ const Menu: React.FC<Props> = ({ active, onChange }) => {
       <MenuItem id={15} active={active} onChange={_onChange}>
         in thoughts
       </MenuItem>
+      <div className="map-wrapper">
+        <img
+          className="menu-image"
+          src={import.meta.env.BASE_URL + "assets/images/karte.jpeg"}
+        />
+        <SvgMap ref={svgRef} />
+      </div>
     </div>
     //   </div>
     // </div>

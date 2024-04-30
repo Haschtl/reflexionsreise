@@ -169,7 +169,41 @@ function App() {
               import.meta.env.BASE_URL + "assets/images/intention2.jpeg"
             }
             audioFile={import.meta.env.BASE_URL + "assets/audio/intention.mp3"}
-          />
+          >
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1809870879&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+            ></iframe>
+            {/* <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+              <a
+                href="https://soundcloud.com/user-89978070"
+                title="Ykil"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none;"
+              >
+                Ykil
+              </a>{" "}
+              ·{" "}
+              <a
+                href="https://soundcloud.com/user-89978070/intention"
+                title="INTENTION"
+                target="_blank"
+                style="color: #cccccc; text-decoration: none;"
+              >
+                INTENTION
+              </a>
+            </div> */}
+            <a
+              href="https://on.soundcloud.com/TuPmbyea3wyuKn1k8"
+              target="_blank"
+            >
+              Soundtrack abspielen
+            </a>
+          </CarouselPage>
           <CarouselPage
             active={nextSlide === 13}
             backgroundImage={
@@ -191,9 +225,13 @@ function App() {
             backgroundImage={
               import.meta.env.BASE_URL + "assets/images/video.jpeg"
             }
+            // videoFile={
+            //   import.meta.env.BASE_URL +
+            //   "assets/video/309e52de-e6cb-4f3a-918b-0d0e22931539.mov"
+            // }
             videoFile={
               import.meta.env.BASE_URL +
-              "assets/video/309e52de-e6cb-4f3a-918b-0d0e22931539.mov"
+              "assets/video/inthoughts.m4v"
             }
           />
         </Carousel>
