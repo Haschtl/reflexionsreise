@@ -231,7 +231,7 @@ function App() {
             // }
             videoFile={
               import.meta.env.BASE_URL +
-              "assets/video/inthoughts.m4v"
+              "assets/video/inthoughts.mov"
             }
           />
         </Carousel>
