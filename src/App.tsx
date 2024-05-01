@@ -170,12 +170,14 @@ function App() {
             }
             audioFile={import.meta.env.BASE_URL + "assets/audio/intention.mp3"}
           >
+            <br/>
             <iframe
+            style={{opacity:0.8}}
               width="100%"
-              height="166"
+              height="120"
               scrolling="no"
               frameBorder="no"
-              allow="autoplay"
+              // allow="autoplay"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1809870879&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
             ></iframe>
             {/* <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
@@ -197,12 +199,12 @@ function App() {
                 INTENTION
               </a>
             </div> */}
-            <a
+            {/* <a
               href="https://on.soundcloud.com/TuPmbyea3wyuKn1k8"
               target="_blank"
             >
               Soundtrack abspielen
-            </a>
+            </a> */}
           </CarouselPage>
           <CarouselPage
             active={nextSlide === 13}
@@ -221,6 +223,7 @@ function App() {
             audioFile={import.meta.env.BASE_URL + "assets/audio/glueck.mp3"}
           />
           <CarouselPage
+          style={{alignItems:"center"}}
             active={nextSlide === 15}
             backgroundImage={
               import.meta.env.BASE_URL + "assets/images/video.jpeg"
@@ -229,11 +232,25 @@ function App() {
             //   import.meta.env.BASE_URL +
             //   "assets/video/309e52de-e6cb-4f3a-918b-0d0e22931539.mov"
             // }
-            videoFile={
-              import.meta.env.BASE_URL +
-              "assets/video/inthoughts.mov"
-            }
-          />
+            // videoFile={
+            //   import.meta.env.BASE_URL +
+            //   "assets/video/inthoughts.mov"
+            // }
+          >
+
+            <div className="page-video-wrapper">
+            <iframe
+              width={9*35}
+              height={16*35}
+              src="https://www.youtube.com/embed/ZVoh01t_YTM?si=3RFXB9d6mmJqnO3P"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullscreen
+            ></iframe>
+            </div>
+          </CarouselPage>
         </Carousel>
       </div>
     </div>

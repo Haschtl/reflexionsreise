@@ -7,12 +7,14 @@ interface Props {
   audioFile?: string;
   videoFile?: string;
   active: boolean;
+  style?: React.CSSProperties;
 }
 const CarouselPage: React.FC<Props> = ({
   children,
   audioFile,
   videoFile,
   backgroundImage,
+  style,
   active,
 }) => {
   // const [videoModalOpen, setVideoModalOpen] = useState(false);
@@ -42,7 +44,7 @@ const CarouselPage: React.FC<Props> = ({
   return (
     <div className="carousel-page">
       <img className="background-image" src={backgroundImage} />
-      <div className="carousel-content">
+      <div className="carousel-content" style={style}>
         <div className="carousel-content-inner">
           {audioFile && (
             <audio ref={audioRef} controls>
@@ -70,9 +72,10 @@ const CarouselPage: React.FC<Props> = ({
           )} */}
           {videoFile && (
             <div className="page-video-wrapper">
-            <video className="page-video" ref={videoRef} controls>
-              <source src={videoFile}></source>
-            </video></div>
+              <video className="page-video" ref={videoRef} controls>
+                <source src={videoFile}></source>
+              </video>
+            </div>
           )}
           {children}
         </div>
