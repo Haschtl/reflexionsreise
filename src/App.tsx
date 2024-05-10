@@ -79,6 +79,9 @@ function App() {
             backgroundImage={
               import.meta.env.BASE_URL + "assets/images/startseite.jpeg"
             }
+            audioFile={
+              import.meta.env.BASE_URL + "assets/audio/derprozess.mp3"
+            }
           />
           <CarouselPage
             active={nextSlide === 1}
@@ -170,9 +173,9 @@ function App() {
             }
             audioFile={import.meta.env.BASE_URL + "assets/audio/intention.mp3"}
           >
-            <br/>
+            <br />
             <iframe
-            style={{opacity:0.8}}
+              style={{ opacity: 0.8 }}
               width="100%"
               height="120"
               scrolling="no"
@@ -223,7 +226,7 @@ function App() {
             audioFile={import.meta.env.BASE_URL + "assets/audio/glueck.mp3"}
           />
           <CarouselPage
-          style={{alignItems:"center"}}
+            style={{ alignItems: "center" }}
             active={nextSlide === 15}
             backgroundImage={
               import.meta.env.BASE_URL + "assets/images/video.jpeg"
@@ -237,18 +240,17 @@ function App() {
             //   "assets/video/inthoughts.mov"
             // }
           >
-
             <div className="page-video-wrapper">
-            <iframe
-              width={9*35}
-              height={16*35}
-              src="https://www.youtube.com/embed/ZVoh01t_YTM?si=3RFXB9d6mmJqnO3P"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullscreen
-            ></iframe>
+              <iframe
+                width={9 * 35}
+                height={16 * 35}
+                src="https://www.youtube.com/embed/ZVoh01t_YTM?si=3RFXB9d6mmJqnO3P"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullscreen
+              ></iframe>
             </div>
           </CarouselPage>
         </Carousel>
