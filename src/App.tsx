@@ -80,7 +80,7 @@ function App() {
               import.meta.env.BASE_URL + "assets/images/startseite.jpeg"
             }
             audioFile={
-              import.meta.env.BASE_URL + "assets/audio/derprozess.mp3"
+              import.meta.env.BASE_URL + "assets/audio/_derprozess.mp3"
             }
           />
           <CarouselPage
@@ -133,7 +133,7 @@ function App() {
               import.meta.env.BASE_URL + "assets/images/entscheidung.jpeg"
             }
             audioFile={
-              import.meta.env.BASE_URL + "assets/audio/entscheidung.mp3"
+              import.meta.env.BASE_URL + "assets/audio/_entscheidung.mp3"
             }
           />
           <CarouselPage
